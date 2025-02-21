@@ -1,0 +1,14 @@
+Enum
+------
+Enums represents a list of constant variable in java.
+ Enums help make the code more readable and maintainable by giving meaningful names
+ to otherwise arbitrary numeric or string values.
+
+As example if we have restaurant
+and methods like
+order_placed,order_accepted,food_prepared,order_pickeup,order_delivered;
+
+@Enumerated have 2 parameter
+    .Ordinal(It store the order of enum) Not recommended
+    .String (Store in a database as String)
+

@@ -1,0 +1,15 @@
+Lombok
+------
+->It aims to reduce the boilerplate code that developers have to write such as
+  getters,setters,constructors and more.
+ 
+->Lombok achieves this by generating the code automatically during compilation,
+  based on annotations you add to your java classes.
+
+->Lombok generates bytecode for methods like getters,setters,constroctors,equals(),
+  hascode(),and toString,as specified by the annotations used in your code.
+  This generated code is addes to the compiled class files(.class files).
+
+ eg:- @Getters, @Setters, @ToString, @RequiredArgsConstructor, @EqualsAndHashCode, @Value
+      for all the avove Annotaions we can use @Data
+

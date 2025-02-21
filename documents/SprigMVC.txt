@@ -1,0 +1,17 @@
+what is Thymeleaf?
+ It is a java templating engine.
+ commonly used to generate the HTML views for web apps.
+
+Where is the thymleaf template processed?
+ it is processed on the server.
+ So the results are included in the HTML and returned to the browser.
+ So here's an example.
+The web browser sends a request over to Spring MVC Controller,
+the controller adds some data to the model, sends it over to the template,
+and then the template sends back HTML to the web browser.
+
+We read the data via $(Acess the attribute name from the model).
+We get the data via @.
+
+Spring has the special annotations called @RequestParam.
+This will allow to read form data and automatically bind it to parameter.

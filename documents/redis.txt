@@ -1,0 +1,69 @@
+Redis:-
+--------
+it will store the computed data in the form of cache.
+It stores frequently accessed data in RAM,
+ allowing faster retrieval compared to querying a database.
+
+Cache Invalidation
+----------------
+to remove the out dated data from the cache
+
+Time based invalidation
+------------------------
+Keys expire after expiration time
+used when data validity is predictable
+
+ex- User session, weather data
+
+(ttl:- time to live)
+---------------------
+After that many time data will be removed from redis server
+
+
+disadvantage
+-------------
+risk of serving stale(outdated) data 
+
+
+Direct/Immediate invalidation
+------------------------------
+Programatically invalidate the data
+Programmer have the full control of the data
+This ensures that stale data is not served.
+
+Use Case:
+Useful when strong consistency is needed, 
+e.g.: real-time data updates in financial applications.
+
+RedisConnectionFactory:
+------------------------
+is a Spring Data Redis component that manages the connection 
+between your Spring Boot application and the Redis server.
+
+RedisTemplate
+-------------
+ is the primary utility used to interact with Redis in Spring Boot.
+It provides a higher-level abstraction over Redis commands and supports operations 
+like get, set, delete, hash operations, etc.
+
+@EnableCaching:
+---------------
+to identify the springboot that we are implementing caching.
+Spring will now look for cache-related annotations and process them.
+
+@Cacheable
+----------
+used to get the data from db and store it in redis cache.
+
+@CachePut
+-----------
+used to update the data in the redis cache
+
+@CacheEvict
+------------
+used to refresh the redis cache
+used when deleting the data from redis cache
+Removes specific cache entries (e.g., when data is deleted or invalidated).
+
+
+drools

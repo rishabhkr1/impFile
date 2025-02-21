@@ -1,0 +1,11 @@
+Restaurant Table: id name addr
+Menu Table:(dishes) : name description price;
+Customer Table: name email number addr
+Order: customerId orderId status 
+
+Many customer having many restaurants
+Many restaurants having many dishes
+One customer can have many orders
+
+
+logging in sb

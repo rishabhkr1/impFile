@@ -1,0 +1,13 @@
+Swagger
+docker
+mysql----------Docker
+redis
+indexing---------- Done
+Spring Security
+integratation testing
+Api documentation
+
+Merging Multiple databases
+
+
+Employee controller->Employee Service->Employee Repository->DataBase

@@ -1,0 +1,25 @@
+Restaurant to menu :- many to many (Price)
+One customer can have multiple addresses(One to many)(enum)
+
+One to many between Orders and menu
+
+
+Adding proper java Docs
+
+Rest endpoints naming convention
+
+Explore applying validation in request model
+
+
+
+
+Dynamic routing
+
+address type as enum
+is default(can make it as boolean)
+Like home(1) office(1) other..
+
+mappers
+
+Creating a new api like find customer by id and find address by customer id
+ gettig all the address by customer id and ver

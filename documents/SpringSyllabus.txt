@@ -1,0 +1,13 @@
+Introduction to Spring Framework
+  Overview of the Spring Framework and its Need.---------------------------------------done
+  Dependency Injection (DI) and Inversion of Control (IoC) principles.-----------------done
+  Types of Dependency Injection (constructor and setter)-------------------------------done
+  Configuring Beans using XML and annotations.
+  Differentiates between ApplicationContext and BeanFactory in Spring.
+  Bean Lifecycle and Scopes.
+
+
+
+poc
+hellomarket
+malaicha

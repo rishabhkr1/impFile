@@ -1,0 +1,113 @@
+what is hibernate?
+ Hibernate is an open source,light weight ORM tools which is used to achieve object relational mapping.
+ Hibernate provide us a platform where we can directly deal with object instead of writing the SQL queries.
+
+What is ORM?(Object Relational Mapping)
+ The process of converting object into relational model(table) is known as ORM.
+ A ORM tools provide us a platform where we can deal with object instead of writing the SQL queries.
+
+What is JPA?(Jakarta/java persistence API) 
+ Standard API for ORM.
+
+Benifits of JPA
+---------------
+ Maintain portable, flexible code by coding to JPA specs(Interfaces)
+ Can theoretically switch vendor implementations.
+ * hibernate/JPA makes use of JDBC in the background for communicating with the database.
+
+EntityManager is main component for creating queries.
+EntityManager is from JPA.
+
+EntityClass
+----------
+Java class that is mapped to a database table.
+The class which represent table in the database is called Entity or POJO class.
+
+POJO:-(Plain old Java Object)
+------------------------------
+ is a class which doesnot have any special restrictions other than those which are 
+ imposed by java.
+
+
+JPA Annotations
+-------------------
+@Entity:-represents the table in the DB.
+         Mark the class as Entity class.
+     
+@Table:-to provide the details of the table.Like name of the table
+      @Table(name="user_info")
+
+@Id:-will mark the fiels as primary key.
+     
+@Column:-is used to provide the information about the column.
+        is optional
+         @Column(name="uname", unique=true, nullable=false)
+
+@GeneratedValue:-we can provide the strategy for the geeration of primary key.
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+
+@Transactional
+--------------
+ Automagically begin and end a transaction for your JPA code.
+ if any sql statement fails entire statement fails.
+ Operations should either be completed completly or should not be carried out at all.
+ deals with failure.
+ 
+
+@Repository
+--------------
+ is sub-annotation of component.
+ is for annotating DAO.
+ give support to component scaning.
+ specialized annotations for repository
+ and also handle the Spring support for exception translation.
+ is used for database operation like(Insest delete update retrive)
+
+Entity Manager
+--------------
+EntityManager.persist():- to save the java Object
+
+JPA Query language(JPQL)
+--------------------------
+
+Query language for retriving object.
+similar in concepts to sql(where,like,order by,join,in etc)
+
+_____________________________________________________________
+=============================================================
+-------------------------------------------------------------
+
+Hibernate Advance mapping
+-------------------------
+
+Cascading:- So cascade basically means you can apply the same operation to related entities.
+----------  
+
+
+Fetch Type
+-----------
+Eager vs Lazy Loading
+----------------------
+
+Eager will retrive everything.
+Lazy will retrive on request.
+
+
+Foreign Key
+-----------
+Main purpose is to build a relationship between tables.
+Prevent operations that will destroy the database.
+Ensures only valid data is inserted into the foreignKey column.
+Can only contain valid reference to primaryKey in other table.
+
+@OneToOne
+----------
+
+@JoinColumn:- annotation is used to specify a column for joining two tables in a relationship between entities,
+ typically in cases where you have a foreign key relationship
+
+JoinTable
+----------
+A table that provides a mapping between two tables.
+It has foreign keys for each table to define mapping relationship.
+

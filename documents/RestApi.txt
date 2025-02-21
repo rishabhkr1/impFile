@@ -1,0 +1,41 @@
+REST(Representational State Transfer)
+-----------------------------------------
+Rest is language independent.
+
+JSON(JavaScript Object Notation)
+--------------------------------
+
+HTTP Response - Status code
+----------------------------
+code Range       description
+----------       ------------
+100-199          Informational
+200-299          Successful
+300-399          Redirectional
+400-499          Client error (File not found)
+500-599          Server error (Internal Server error)
+
+*MIME(Multipurpose Internet Mail-Extension)
+
+ 
+*We need a client tool to send request to the REST Web Servics/API
+ like(Postman)
+ 
+Postman
+----------
+Postman Makes API Development Simple.
+
+Converting JSON to Java POJO is known as DataBinding/mapping.
+
+@PathVariable annotation would be an endpoint that identifies an entity with a primary key
+
+Spring calls the methods annotated with @PostConstruct only once, just after the initialization of bean properties. 
+ 
+@ControllerAdvice is used to handle the global exception and it is recommended.
+
+@Service applied to service implementations
+We don't use @Transactoional at DAO layer it will be handled at service layer
+the DAO does not handle the transactional, instead, it's managed at the service layer.
+
+This service layer will actually
+sit between our employee controller and our employee DAO.

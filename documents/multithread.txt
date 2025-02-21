@@ -1,0 +1,78 @@
+MultiTasking
+---------------------
+1.Process Based
+2.Thread Based
+
+1.Process Based
+-------------------
+:- executing several task simultaneously where each task is seperate indipedent process.
+ eg- listing song while coding and also download the file from net all these task will be executed simultaneously
+     in same time.
+   Suitable for OS level
+
+2.Thread based 
+---------------
+ executing several task simultaneously where each task is seperate indipedent part of the same program .
+ each independent part is called thread.
+ is best suitable at programmatic level.
+
+the main objective of multitaskig is to reduce the response time of the system and improve performance.
+
+Thread:
+----------
+Threads are independent. 
+If there occurs exception in one thread, it doesn't affect other threads. 
+It uses a shared memory area.
+Thread is started by calling t.start().
+
+Thread Priority
+------------------------
+ represented by a number between 1 and 10.
+ which is 1 (minimum) to 10 (maximum).
+
+3constants defined in Thread class:
+ public static int MIN_PRIORITY  - 1
+ public static int NORM_PRIORITY - 5
+ public static int MAX_PRIORITY  - 10
+
+ . thread which have the higher priority will get the chance first.
+ . -thread schedular will use priority while allocating processors.
+ . havig same priority we cannot expect the exact execution order.
+
+Thread Schedular
+---------------------
+. multiple thread are waiting to get a chance of execution then
+  in which order thread will be executed is decided by thread schedular.
+
+:-prevent thread execution:
+    join()
+    Sleep()
+    Yeild()
+ 
+
+yeild():-
+----------
+ method of thread class causes the currently executing thread object to  
+ temporarily pause and allow other threads to execute.
+
+
+
+join():-
+------------------
+ if a thread wants to wait until completing some other thread then we should go for join method.
+ for eg:- if a thread t1 wants to wait until completing t2 then t1 has to call t2.join();
+ if t1 executes t2.join then immediatly t1 will be entered into waiting state until t2 completes.
+ once t2 completes then t1 can continue its execution.
+
+
+Java Thread pool :
+--------------------
+ represents a group of worker threads that are waiting for the job and reused many times.
+ Better performance It saves time because there is no need to create a new thread.
+ It is used in Servlet and JSP where the container creates a thread pool to process the request.
+ 
+Java Join Method :
+----------------------
+ Thread class that permits one thread to wait until the other thread to finish its execution.
+
+

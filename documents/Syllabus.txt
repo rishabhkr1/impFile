@@ -1,0 +1,29 @@
+1.Abstract Classes vs. Interfaces---------------------------------------------------------- Done
+2.Exception Handling------------------------------------------------------------------------Done
+3.Comparison between Abstract Classes and Interfaces with examples and use case-------------Done
+4.Exception Hierarchy in Java: understanding types and relationships.-----------------------Done
+5.Overview of Finally Block for cleanup operations.-----------------------------------------Done
+6.Throwing Exceptions explicitly using the throw keyword.-----------------------------------Done
+7.Exception Propagation: how exceptions propagate up the call stack.------------------------Done
+8.Lambda Expressions -----------------------------------------------------------------------Done
+9.Functional interfaces---------------------------------------------------------------------Done
+10.Exploring Lambda Expressions and Functional Interfaces in Java 8.------------------------Done
+11.Using Lambdas for concise and functional programming.------------------------------------Done
+12.Singleton Design Pattern-----------------------------------------------------------------Done
+13.Practical usage of built-in functional interfaces: Predicate, Consumer, Function.--------Done
+14.Overview of Java Collections framework: Lists, Sets, Maps.-------------------------------Done
+15.Introduction to Queues in Java Collections.----------------------------------------------Done
+16.Generics (classes and Methods)-----------------------------------------------------------Done
+17.Streams (Streams Api for functional style operation on collections)----------------------Done
+18.HashMap (Different hashing algorithms)---------------------------------------------------Done
+19.Difference between parallel and sequential streams---------------------------------------Done
+
+==================================================================================================
+
+1.Introduction to Multithreading ----------------------------------------------------------Done
+2.Creating and managing threads in Java.---------------------------------------------------Done
+3.Exploring thread pool and join operations.-----------------------------------------------
+4.Synchronization Mechanisms---------------------------------------------------------------
+5.Exploring thread pools for efficient thread management.----------------------------------
+6.Executor Service: Overview and Benefits.-------------------------------------------------
+

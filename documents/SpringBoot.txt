@@ -1,0 +1,200 @@
+Spring Boot
+----------------
+The main goal of Spring Boot is to reduce development, unit test, 
+and integration test time and in Spring Boot, there is no requirement for XML configuration.
+
+ Coupling 
+There are two types of coupling:
+1.Tight Coupling:- Dependent
+   Changes made in one class also affect the other class
+2.Loose Coupling:- Indipendent
+   Changes made in one class will not affect the other class.
+
+
+
+* Maven
+-------
+It will find the jar file for us.
+Standard directory structure.
+ 
+
+Group ID:- Name of the organization,Company..
+Artifact ID:- Name of the project
+
+
+Maven Wrapper Files(mvnw)
+-------------------------
+if correct version of maven is not found it automatically downloads the correct version.
+
+
+Application.properties file:
+-------------------------------
+ can add springboot properties
+eg:-server.port=8585
+
+
+Springboot Actuator
+---------------------
+ Exposes endpoints to moniter and manage your application.
+ Simply add the dependency to your POM file.
+ edpoints are prefixed with /actuator.
+
+ 
+IOC(Inversion of control)
+--------------------------
+ It creates the objects/container, configures and assembles their dependencies,
+ manages their entire life cycle.
+
+Spring will create the object of class and it will inject to another class is known as inversion of control.
+
+ 
+The followings are some of the main features of Spring IoC,
+  Creating Object for us,
+  Managing our objects,
+  Helping our application to be configurable,
+  Managing dependencies
+
+Dependency Injection
+-----------------------------
+ One class depend on another class to do the work.
+ when we create object with new keyword it become tightly coupled which is not recommended
+ is the main functionality provided by Spring IOC(Inversion of Control). 
+ The Spring-Core module is responsible for injecting dependencies through either Constructor or Setter methods. 
+ The design principle of Inversion of Control emphasizes keeping the Java classes independent of each other and
+ the container frees them from object creation and maintenance.
+
+There are two types of Spring Dependency Injection.
+  *Setter Dependency Injection (SDI)
+  *Constructor Dependency Injection (CDI)
+
+Constructor Injection
+-------------------------
+ Use this when you have required dependencies.
+ recommended as first choice.
+
+Setter Injection
+------------------
+ Use this when you have optional dependencies.
+ If dependencies is not provided,
+ app can provide reasonable default logic.
+
+Field Injection
+----------------
+It is not recommended
+It makes code harder to unit test.
+
+
+**Create and manage objects(Inversion of control)
+
+**Inject objects dependencies(Dependency Injection)
+
+
+Component Scanning
+------------------
+ Spring will scan java classes for special annotaytions @Component
+ Automatically register the beans in the Spring container
+
+Lazy Initialization
+-----------------------
+ Only create object as needed.
+ May help with faster startup time if you have large number of components.
+
+
+
+ Bean Scopes
+ ------------
+ Scope refers to the lifecycle of a bean.
+ Default scope is singleton.(only one instance of bean)
+   
+
+Bean LifeCycle Methods
+---------------------------
+ Add custom code during bean initialization
+
+@Bean
+---------
+ Make an existing third party class available to spring framework
+
+
+Spring Bean Scopes
+_________________________
+
+Singleton
+------------
+ Create and shared instance of the bean.Default scope.
+ By default singleton.
+
+
+Prototype
+-----------
+ Creates a new bean instance for each container request.
+ By using scope annotations @Scope("prototype")
+ @Scope annotations is only used with @Component.
+
+
+Request
+----------
+ Scoped to an HTTP web request.Only used for web apps.
+
+Session
+---------
+ Scoped to an HTTP web session.Only used for web apps.
+
+
+@PostConstruct (bean initialization)
+---------------
+ this is where you can add your own custom initialization code
+ once the bean has been constructed.
+ @PostConstruct is populating a database. 
+ For instance, during development, we might want to create some default users.
+
+@PreDestroy (bean destruction)
+---------------
+ for any cleanup work that you need to do.
+ this method should be to release resources or perform other cleanup tasks, such as closing a database connection,
+ before the bean gets destroyed.
+
+_________________
+@Annotations
+-------------
+
+   @RestController
+   -----------------
+   simplify the creation of RESTful web services.
+   Developing restful web services.
+
+   @Component
+   -----------
+  Create a new object in the spring container.
+  marks the class as a spring bean.
+  makes it available for dependency injection.
+
+   @Autowired
+   -----------
+  Using this we will get connected with the object which is created by spring framework.
+  try to search for the object in the spring container.
+  [ it search for the type not the name. ]
+ *It tells Spring to inject depedency.
+ *if you only have one constructor the @Autowired on constructor is optional.
+  @Autowired is one of the core annotations in Spring, used for automatic dependency injection.
+   Spring will scan @components
+
+  @Qualifier("name")
+  --------------------
+  it search for the name we have to pass the name to it.
+  Same name as class name, first character lower-case.
+
+  @Primary
+  ----------
+  can have only one for multiple implementations.
+  
+@Qualifier have the higher priority than primary
+
+
+  @GetMapping
+  ----------------
+  It maps HTTP GET requests to a specific handler method in Spring controllers.
+  
+ 
+
+ 

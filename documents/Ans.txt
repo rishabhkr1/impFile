@@ -1,0 +1,189 @@
+Exception Handling
+------------------------------
+ event that occurs during the execution of a program that disrupts the normal flow of Execution.
+ -advantage of exception handling is to maintain the normal flow of the application
+ There are 3 types of excption
+1.Checked 
+2.UnChecked (Runtime Exception )
+3.Error
+1.Checked Exception
+----------------------
+ checked at compile-time.
+ compiler verifies that the code handles these exceptions either by catching them or declaring them
+ in the method signature using the throws keyword.
+ Eg- ClassNotFoundException,IOException,SQLException.
+
+2.Unchecked Exception
+----------------------
+ are not checked at compile-time.
+ These exceptions usually occur due to programming errors
+ such as logic errors or incorrect assumptions in the code.
+ eg- NullPointerException,ArrayIndexOutOfBoundsException,ArithmeticException
+
+3.Errors
+----------------------
+ Eg- OutOfMemoryError, StackOverflowError, NoClassDefFoundError, etc.
+
+
+
+Singleton design pattern
+----------------------------
+1. Constructors must be private.(We can restrict the constructor calling.)
+2. Have only single object we cannot create multiple object but 
+   we can use it multiple number of times anywhere.
+
+ There are two forms of singleton design pattern
+1.Lazy way
+2.eager way
+
+Functional interface
+---------------------
+ It is a interface which have only one abstract method.
+ It is also know as sam(single abstract method interface).
+ we can use annotation as @FunctionalInterface.
+ we cannot instanciate the object so for this we can use lambda expression.
+ We cannot create the object of interface.
+
+Lambda Expression
+------------------------
+ is denoted by ->
+ we use it write consize code
+
+Predicate
+------------
+ is great for testing conditions and filtering elements.
+ checking if a number is positive or filtering strings based on a condition)
+ Return type is boolean.
+ It has a method called test.
+
+Function
+------------
+ is essential when you need to transform or map data from one type to another
+ like converting a string to its length or an integer to its square.
+
+Cosumer
+---------
+ is usefull for operation that process elements without returning anything such as printing,updating.
+ return type is void.
+
+
+Predicate<T> ----> Boolean
+Function<T,R> ----> R type
+Consumer<T> ------>Void
+
+-----------------------------------------
+ Iterable
+  ||
+ Collection
+1.List:- ArrayList,LinkedList,Vector
+2.Queue:- Priority Queue,Array Deque
+3.Set:- HashSet,Linked HashSet,Tree Set
+
+ Map:- HashMap,LinkedHashMap,Tree Map
+
+List:
+--------
+ Hetrogenous data are accepted inside list.
+ Dublicates are allowed.
+ List is indexed based.
+ order of insertion is maintained.
+
+ArrayList
+---------------
+ Initial capacity is 10.
+ Null is allowed.
+ ArrayList a=new ArrayList();
+ a.add(10);
+ ArrayList is better for storing and accessing data.
+
+LinkedList
+--------------
+ It is better for manipulating the data.
+ implemented using the doublyLinkedList DataStructure.
+ we do not have to specify the size while creating it.
+
+Set
+--------
+ Doesnot allow dublicates.
+ Does not maintain any specific order of elements.
+ Null is not allowed.
+
+Map
+------------
+ Stored in key value pair.
+ keys are unique
+ values can be duplicated.
+ The order of a map depends on the specific implementations.
+ For example, TreeMap and LinkedHashMap have predictable orders
+ But HashMap does not.
+ 
+
+Queue
+--------------
+ it stores and process the data in FIFO order.
+ It is an ordered list of objects limited to inserting elements at the end of the list and
+ deleting elements from the start of the list.
+ PriorityQueue do not allow null elements.
+ Commonly used for Task scheduling, Message passing, and Buffer management in applications.
+ add(element): If the queue is full, it throws an exception.
+ offer(elements): If the queue is full, it returns false.
+ 
+
+Generics
+-------------
+ Generics allow you to define a class, interface, or method with type parameters.
+ These type parameters act as placeholders for specific types that are specified 
+ when you create an instance of a class or invoke a method.
+ (?) is known as wild card- we use it when we dont know the exactly type parameter.
+
+
+Streams
+---------
+ perform operations like filtering,mapping,reducing and sorting.
+ don’t change the original data structure,
+ they only provide the result as per the pipelined methods.
+ used to process and manipulate collections of data in a functional and declarative manner.
+ once we consume the string we cannot re-use it, if we try to use it will throw an exception.
+ It is used to reduce the code length.
+ Streams is a interface.
+ .map(Function<T, R>)  = map(p->p.price)
+ .filter(Predicate<T>) = filter(p -> p.price > 30000)
+ .distinct()                    = give all the unique value
+ .sorted()                      = sorted(Comparator.reverseOrder())
+ .limit(long n)                 = limit(5) 
+ .skip(long n)
+ .forEach(Consumer<T>)          = forEach(System.out::println)
+ .collect(Collector<T, A, R>)   = collect(Collectors.toList())
+ .count()                       = count the element of given list.
+ .reduce(BinaryOperator<T>)     = reduce(0,(a,b)->a+b)
+
+
+Intermediate Stream
+----------------------------
+ is a stream which return another stream
+
+
+Key Differences Between Intermediate and Terminal Operations
+-----------------------------------------------------------------
+
+ 
+
+Sequential and Parallel streams
+----------------------------------
+ Parallel Streams:- The order of execution is not under our control.
+                    Denoted with parallel keywords(parallelStream()).
+
+
+
+Multithreading
+----------------------
+
+
+ 
+
+
+
+
+
+
+
